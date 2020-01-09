@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">EasyPopup</string>
     <string name="action_settings">Settings</string>
+
+    <string name="btn_text_send">发送</string>
+    <string name="btn_text_speak">按住录音</string>
+    <string name="btn_text_speak_over">松开结束</string>
 </resources>

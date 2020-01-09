@@ -1,5 +1,6 @@
 package com.zyyoona7.easypopup;
 
+import android.graphics.Color;
 import android.view.View;
 import android.widget.Button;
 
@@ -7,6 +8,11 @@ import com.zyyoona7.easypopup.base.BaseActivity;
 import com.zyyoona7.easypopup.basic.BasicActivity;
 import com.zyyoona7.easypopup.easypop.EasyPopActivity;
 import com.zyyoona7.easypopup.easypop.RecyclerViewActivity;
+import com.zyyoona7.easypopup.emoji.EmojiActivity;
+import com.zyyoona7.easypopup.keyboard.KeybordActivity;
+import com.zyyoona7.easypopup.movie.MovieActivity;
+import com.zyyoona7.easypopup.surface.SurfaceActivity;
+import com.zyyoona7.easypopup.webp.WebpActivity;
 
 public class MainActivity extends BaseActivity {
 
@@ -17,6 +23,11 @@ public class MainActivity extends BaseActivity {
     private Button mEasyBtn;
 
     private Button mRvBtn;
+    private Button mMoviewBtn;
+    private Button mWebpBtn;
+    private Button mSurface;
+    private Button emoji;
+    private Button keyboard;
 
     @Override
     protected int setLayoutId() {
@@ -33,6 +44,11 @@ public class MainActivity extends BaseActivity {
         mBasicBtn = (Button) findViewById(R.id.btn_basic);
         mEasyBtn = (Button) findViewById(R.id.btn_easy);
         mRvBtn = (Button) findViewById(R.id.btn_recycler);
+        mMoviewBtn = (Button) findViewById(R.id.btn_movie);
+        mWebpBtn = (Button) findViewById(R.id.btn_webp);
+        mSurface = (Button) findViewById(R.id.surface);
+        emoji = (Button) findViewById(R.id.emoji);
+        keyboard = (Button) findViewById(R.id.keyboard);
     }
 
     @Override
@@ -55,6 +71,36 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 goTo(RecyclerViewActivity.class);
+            }
+        });
+        mMoviewBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTo(MovieActivity.class);
+            }
+        });
+        mWebpBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTo(WebpActivity.class);
+            }
+        });
+        mSurface.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTo(SurfaceActivity.class);
+            }
+        });
+        emoji.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTo(EmojiActivity.class);
+            }
+        });
+        keyboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTo(KeybordActivity.class);
             }
         });
     }

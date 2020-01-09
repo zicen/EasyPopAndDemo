@@ -24,4 +24,33 @@
         android:layout_height="wrap_content"
         android:text="RecyclerView"
         android:id="@+id/btn_recycler"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Movie"
+        android:id="@+id/btn_movie"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Webp"
+        android:id="@+id/btn_webp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SurfaceView"
+        android:id="@+id/surface"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Emoji"
+        android:id="@+id/emoji"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Keyboard"
+        android:id="@+id/keyboard"/>
 </LinearLayout>
