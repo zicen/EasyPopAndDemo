@@ -1,13 +1,11 @@
 package com.zyyoona7.easypopup.keyboard;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import com.zyyoona7.easypopup.R;
-import com.zyyoona7.easypopup.dialogfragment.ChatDialogFragment;
-import com.zyyoona7.easypopup.dialogfragment.KeyboardDialog;
 
 public class KeybordActivity extends AppCompatActivity implements View.OnClickListener {
     private Button mBtnShow;
@@ -27,13 +25,10 @@ public class KeybordActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_show:
-                ChatDialogFragment chatDialogFragment2 = new ChatDialogFragment();
-                chatDialogFragment2.showNow(getSupportFragmentManager(),"ChatDialogFragment2");
-
+                startActivity(new Intent(KeybordActivity.this,UnresolvedActivity.class));
                 break;
             case R.id.btn_show2:
-                KeyboardDialog dialog = new KeyboardDialog();
-                dialog.show(getSupportFragmentManager(),KeyboardDialog.class.getSimpleName());
+                startActivity(new Intent(KeybordActivity.this,ResolvedActivity.class));
                 break;
             default:
                 break;

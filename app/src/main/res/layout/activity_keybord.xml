@@ -12,13 +12,13 @@
         android:id="@+id/btn_show"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="点击弹出输入弹窗" />
+        android:text="未解决键盘面板切换闪动问题" />
 
     <Button
         android:id="@+id/btn_show2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="点击弹出自定义输入弹窗2" />
+        android:text="解决键盘面板切换闪动问题" />
 
 
 </LinearLayout>

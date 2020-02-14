@@ -33,6 +33,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".easypop.RecyclerViewActivity" />
         <activity android:name=".surface.SurfaceActivity" />
+        <activity android:name=".keyboard.UnresolvedActivity" />
+        <activity android:name=".keyboard.ResolvedActivity" />
     </application>
 
 </manifest>
