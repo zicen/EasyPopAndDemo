@@ -2,14 +2,11 @@ package com.zyyoona7.easypopup.keyboard.widget;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.ContextWrapper;
 import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.ViewTreeObserver;
-import android.view.WindowManager;
 import android.widget.RelativeLayout;
-
-import com.blankj.utilcode.util.ActivityUtils;
+import com.blankj.utilcode.util.LogUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,6 +48,7 @@ public class SoftKeyboardSizeWatchLayout extends RelativeLayout {
                         }
                     }
                 }
+                LogUtils.d("mNowh："+mNowh+"，mOldh："+mOldh);
                 mOldh = mNowh;
             }
         });

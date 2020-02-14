@@ -3,6 +3,7 @@ package com.zyyoona7.easypopup.webp;
 import android.graphics.drawable.Animatable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.controller.BaseControllerListener;
@@ -13,14 +14,13 @@ import com.facebook.fresco.animation.drawable.AnimationListener;
 import com.facebook.imagepipeline.image.ImageInfo;
 import com.facebook.imagepipeline.request.ImageRequest;
 import com.zyyoona7.easypopup.R;
-import org.jetbrains.annotations.Nullable;
 
 public class WebpActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Fresco.initialize(this);
+
         setContentView(R.layout.activity_webp);
 
         SimpleDraweeView mSdvNobel = findViewById(R.id.sdv);

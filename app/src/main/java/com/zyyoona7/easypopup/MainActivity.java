@@ -4,14 +4,18 @@ import android.graphics.Color;
 import android.view.View;
 import android.widget.Button;
 
+import com.blankj.utilcode.util.Utils;
+import com.facebook.drawee.backends.pipeline.Fresco;
 import com.zyyoona7.easypopup.base.BaseActivity;
 import com.zyyoona7.easypopup.basic.BasicActivity;
+import com.zyyoona7.easypopup.demo.TestResizeActivity;
 import com.zyyoona7.easypopup.easypop.EasyPopActivity;
 import com.zyyoona7.easypopup.easypop.RecyclerViewActivity;
 import com.zyyoona7.easypopup.emoji.EmojiActivity;
 import com.zyyoona7.easypopup.keyboard.KeybordActivity;
 import com.zyyoona7.easypopup.movie.MovieActivity;
 import com.zyyoona7.easypopup.surface.SurfaceActivity;
+import com.zyyoona7.easypopup.svg.SVGActivity;
 import com.zyyoona7.easypopup.webp.WebpActivity;
 
 public class MainActivity extends BaseActivity {
@@ -28,9 +32,12 @@ public class MainActivity extends BaseActivity {
     private Button mSurface;
     private Button emoji;
     private Button keyboard;
+    private Button svg;
+    private Button resize;
 
     @Override
     protected int setLayoutId() {
+
         return R.layout.activity_main;
     }
 
@@ -49,6 +56,8 @@ public class MainActivity extends BaseActivity {
         mSurface = (Button) findViewById(R.id.surface);
         emoji = (Button) findViewById(R.id.emoji);
         keyboard = (Button) findViewById(R.id.keyboard);
+        svg = (Button) findViewById(R.id.svg);
+        resize = (Button) findViewById(R.id.resize);
     }
 
     @Override
@@ -101,6 +110,18 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 goTo(KeybordActivity.class);
+            }
+        });
+        svg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTo(SVGActivity.class);
+            }
+        });
+        resize.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTo(TestResizeActivity.class);
             }
         });
     }

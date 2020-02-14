@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import com.blankj.utilcode.util.LogUtils;
 import com.zyyoona7.easypopup.R;
 import com.zyyoona7.easypopup.keyboard.adpater.PageSetAdapter;
 import com.zyyoona7.easypopup.keyboard.data.PageSetEntity;
@@ -28,8 +29,9 @@ import com.zyyoona7.easypopup.keyboard.widget.FuncLayout;
 
 import java.util.ArrayList;
 
-public class XhsEmoticonsKeyBoard extends AutoHeightLayout implements View.OnClickListener, EmoticonsFuncView.OnEmoticonsPageViewListener,
-        EmoticonsToolBarView.OnToolBarItemClickListener, EmoticonsEditText.OnBackKeyClickListener, FuncLayout.OnFuncChangeListener {
+public class XhsEmoticonsKeyBoard extends AutoHeightLayout implements View.OnClickListener,
+        EmoticonsFuncView.OnEmoticonsPageViewListener, EmoticonsToolBarView.OnToolBarItemClickListener,
+        EmoticonsEditText.OnBackKeyClickListener, FuncLayout.OnFuncChangeListener {
 
     public static final int FUNC_TYPE_EMOTION = -1;
     public static final int FUNC_TYPE_APPPS = -2;
@@ -198,6 +200,8 @@ public class XhsEmoticonsKeyBoard extends AutoHeightLayout implements View.OnCli
 
     @Override
     public void onSoftKeyboardHeightChanged(int height) {
+        LogUtils.d("onSoftKeyboardHeightChanged height: " + height);
+
         mLyKvml.updateHeight(height);
     }
 
@@ -304,7 +308,7 @@ public class XhsEmoticonsKeyBoard extends AutoHeightLayout implements View.OnCli
     }
 
     public boolean dispatchKeyEventInFullScreen(KeyEvent event) {
-        if(event == null){
+        if (event == null) {
             return false;
         }
         switch (event.getKeyCode()) {
@@ -314,14 +318,14 @@ public class XhsEmoticonsKeyBoard extends AutoHeightLayout implements View.OnCli
                     return true;
                 }
             default:
-                if(event.getAction() == KeyEvent.ACTION_DOWN){
+                if (event.getAction() == KeyEvent.ACTION_DOWN) {
                     boolean isFocused;
                     if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
                         isFocused = mEtChat.getShowSoftInputOnFocus();
                     } else {
                         isFocused = mEtChat.isFocused();
                     }
-                    if(isFocused){
+                    if (isFocused) {
                         mEtChat.onKeyDown(event.getKeyCode(), event);
                     }
                 }
@@ -329,9 +333,13 @@ public class XhsEmoticonsKeyBoard extends AutoHeightLayout implements View.OnCli
         }
     }
 
-    public EmoticonsEditText getEtChat() { return mEtChat; }
+    public EmoticonsEditText getEtChat() {
+        return mEtChat;
+    }
 
-    public Button getBtnVoice() { return mBtnVoice; }
+    public Button getBtnVoice() {
+        return mBtnVoice;
+    }
 
     public Button getBtnSend() {
         return mBtnSend;

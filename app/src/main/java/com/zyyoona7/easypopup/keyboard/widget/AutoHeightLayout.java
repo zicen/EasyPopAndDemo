@@ -8,6 +8,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
+import com.blankj.utilcode.util.LogUtils;
 import com.zyyoona7.easypopup.R;
 import com.zyyoona7.easypopup.keyboard.utils.EmoticonsKeyboardUtils;
 
@@ -63,7 +64,7 @@ public abstract class AutoHeightLayout extends SoftKeyboardSizeWatchLayout imple
 
     public void updateMaxParentHeight(int maxParentHeight) {
         this.mMaxParentHeight = maxParentHeight;
-        if(maxParentHeightChangeListener != null){
+        if (maxParentHeightChangeListener != null) {
             maxParentHeightChangeListener.onMaxParentHeightChange(maxParentHeight);
         }
     }
@@ -77,7 +78,7 @@ public abstract class AutoHeightLayout extends SoftKeyboardSizeWatchLayout imple
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        if(mConfigurationChangedFlag){
+        if (mConfigurationChangedFlag) {
             mConfigurationChangedFlag = false;
             Rect r = new Rect();
             ((Activity) mContext).getWindow().getDecorView().getWindowVisibleDisplayFrame(r);
@@ -99,6 +100,7 @@ public abstract class AutoHeightLayout extends SoftKeyboardSizeWatchLayout imple
 
     @Override
     public void OnSoftPop(final int height) {
+        LogUtils.d("OnSoftPop height:" + height);
         if (mSoftKeyboardHeight != height) {
             mSoftKeyboardHeight = height;
             EmoticonsKeyboardUtils.setDefKeyboardHeight(mContext, mSoftKeyboardHeight);
@@ -107,7 +109,8 @@ public abstract class AutoHeightLayout extends SoftKeyboardSizeWatchLayout imple
     }
 
     @Override
-    public void OnSoftClose() { }
+    public void OnSoftClose() {
+    }
 
     public abstract void onSoftKeyboardHeightChanged(int height);
 

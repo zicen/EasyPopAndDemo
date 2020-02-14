@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zyyoona7.easypopup.panel.view.PanelSwitchLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/panel_switch_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
+    <!-- 内容区域 -->
+    <!-- edit_view 指定一个 EditText 用于输入 ，必须项-->
+    <!-- empty_view 指定用户点击该 ID 对应的 View 时实现面板或者输入法隐藏，非必须项 -->
+    <com.zyyoona7.easypopup.panel.view.ContentContainer
         android:id="@+id/content_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:edit_view="@id/edit_text"
+        app:empty_view="@id/empty_view">
 
         <com.zyyoona7.easypopup.panel.view.EmptyView
             android:id="@+id/empty_view"
@@ -20,14 +26,13 @@
 
         <!--输入区域-->
         <LinearLayout
-            android:id="@+id/input_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <android.support.v7.widget.AppCompatEditText
-                android:id="@+id/edit"
+                android:id="@+id/edit_text"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
@@ -51,7 +56,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"
-                android:src="@drawable/selector_emotion_btn" />
+                android:src="@drawable/selector_emotion_btn"/>
 
             <TextView
                 android:id="@+id/send"
@@ -63,13 +68,25 @@
                 android:textColor="#fa3d3d3d"
                 android:textSize="16sp" />
         </LinearLayout>
+    </com.zyyoona7.easypopup.panel.view.ContentContainer>
 
-        <LinearLayout
-            android:id="@+id/panel_container"
+
+    <!-- 面板区域，仅能包含PanelView-->
+    <com.zyyoona7.easypopup.panel.view.PanelContainer
+        android:id="@+id/panel_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- 每一项面板 -->
+        <!-- panel_layout 用于指定面板该 ID 对应的布局 ，必须项-->
+        <!-- panel_trigger 用于用户点击该 ID 对应的 View 时切换到该面板 -->
+        <!-- panel_toggle  用于当该面板显示时 ，用户再次点击 panel_trigger 对应的 View 时是否回切输入法-->
+        <com.zyyoona7.easypopup.panel.view.PanelView
+            android:id="@+id/panel_emotion"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:orientation="vertical"
-            android:visibility="gone" />
-    </LinearLayout>
-</LinearLayout>
+            android:layout_height="match_parent"
+            app:panel_layout="@layout/layout_demo"
+            app:panel_trigger="@id/emotion_btn" />
+
+    </com.zyyoona7.easypopup.panel.view.PanelContainer>
+
+</com.zyyoona7.easypopup.panel.view.PanelSwitchLayout>

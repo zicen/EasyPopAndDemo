@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
+import com.blankj.utilcode.util.KeyboardUtils;
 import com.zyyoona7.easypopup.keyboard.utils.EmoticonsKeyboardUtils;
 
 import java.util.ArrayList;
@@ -34,7 +35,8 @@ public class FuncLayout extends LinearLayout {
             return;
         }
         mFuncViewArrayMap.put(key, view);
-        ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.MATCH_PARENT);
         addView(view, params);
         view.setVisibility(GONE);
     }
@@ -51,24 +53,23 @@ public class FuncLayout extends LinearLayout {
     public void toggleFuncView(int key, boolean isSoftKeyboardPop, EditText editText) {
         if (getCurrentFuncKey() == key) {
             if (isSoftKeyboardPop) {
-                if(EmoticonsKeyboardUtils.isFullScreen((Activity) getContext())){
-                    EmoticonsKeyboardUtils.closeSoftKeyboard(editText);
-                } else {
-                    EmoticonsKeyboardUtils.closeSoftKeyboard(getContext());
-                }
+                KeyboardUtils.hideSoftInput(editText);
             } else {
-                EmoticonsKeyboardUtils.openSoftKeyboard(editText);
+                KeyboardUtils.showSoftInput(editText);
             }
         } else {
             if (isSoftKeyboardPop) {
-                if(EmoticonsKeyboardUtils.isFullScreen((Activity) getContext())){
-                    EmoticonsKeyboardUtils.closeSoftKeyboard(editText);
-                } else {
-                    EmoticonsKeyboardUtils.closeSoftKeyboard(getContext());
-                }
+                KeyboardUtils.hideSoftInput(editText);
             }
             showFuncView(key);
         }
+        // if (isSoftKeyboardPop) {
+        //     KeyboardUtils.hideSoftInput(editText);
+        //     showFuncView(key);
+        // }else {
+        //     KeyboardUtils.showSoftInput(editText);
+        //     hideAllFuncView();
+        // }
     }
 
     public void showFuncView(int key) {

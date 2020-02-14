@@ -12,7 +12,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".keyboard.KeybordActivity"></activity>
+        <activity android:name=".demo.TestResizeActivity"></activity>
+        <activity android:name=".svg.SVGActivity" />
+        <activity android:name=".keyboard.KeybordActivity" />
         <activity android:name=".emoji.EmojiActivity" />
         <activity android:name=".webp.WebpActivity" />
         <activity android:name=".movie.MovieActivity" />
@@ -30,7 +32,6 @@
             android:name=".easypop.EasyPopActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".easypop.RecyclerViewActivity" />
-        <activity android:name=".kt.KotlinActivity" />
         <activity android:name=".surface.SurfaceActivity" />
     </application>
 
