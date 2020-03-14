@@ -12,7 +12,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".demo.TestResizeActivity"></activity>
+        <activity android:name=".toast.ToastActivity"></activity>
+        <activity android:name=".notice.LiveNoticeActivity" />
+        <activity android:name=".demo.TestResizeActivity" />
         <activity android:name=".svg.SVGActivity" />
         <activity android:name=".keyboard.KeybordActivity" />
         <activity android:name=".emoji.EmojiActivity" />

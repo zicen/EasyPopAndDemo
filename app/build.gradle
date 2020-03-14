@@ -41,8 +41,9 @@ dependencies {
     api "com.facebook.fresco:animated-drawable:1.12.1"
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation "com.zlc.glide:webpdecoder:1.6.4.9.0"
 
-    implementation 'com.blankj:utilcode:1.26.0'
+    implementation 'com.blankj:utilcode:1.25.9'
 //    implementation 'com.zyyoona7.easypopup.panelSwitchHelper:1.0.5'
 //    api "com.android.support:support-emoji-appcompat:$support_version"
 //    api "com.android.support:support-emoji-bundled:$support_version"

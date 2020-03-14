@@ -64,5 +64,9 @@
         android:layout_height="wrap_content"
         android:text="测试 resize 收益"
         android:id="@+id/resize"/>
-
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="测试 Toast"
+        android:id="@+id/toast"/>
 </LinearLayout>

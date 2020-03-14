@@ -16,6 +16,7 @@ import com.zyyoona7.easypopup.keyboard.KeybordActivity;
 import com.zyyoona7.easypopup.movie.MovieActivity;
 import com.zyyoona7.easypopup.surface.SurfaceActivity;
 import com.zyyoona7.easypopup.svg.SVGActivity;
+import com.zyyoona7.easypopup.toast.ToastActivity;
 import com.zyyoona7.easypopup.webp.WebpActivity;
 
 public class MainActivity extends BaseActivity {
@@ -34,6 +35,7 @@ public class MainActivity extends BaseActivity {
     private Button keyboard;
     private Button svg;
     private Button resize;
+    private Button toast;
 
     @Override
     protected int setLayoutId() {
@@ -58,6 +60,7 @@ public class MainActivity extends BaseActivity {
         keyboard = (Button) findViewById(R.id.keyboard);
         svg = (Button) findViewById(R.id.svg);
         resize = (Button) findViewById(R.id.resize);
+        toast = (Button) findViewById(R.id.toast);
     }
 
     @Override
@@ -68,14 +71,12 @@ public class MainActivity extends BaseActivity {
                 goTo(BasicActivity.class);
             }
         });
-
         mEasyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 goTo(EasyPopActivity.class);
             }
         });
-
         mRvBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -122,6 +123,12 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 goTo(TestResizeActivity.class);
+            }
+        });
+        toast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTo(ToastActivity.class);
             }
         });
     }
