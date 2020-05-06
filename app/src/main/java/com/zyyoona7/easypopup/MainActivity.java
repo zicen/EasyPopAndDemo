@@ -1,21 +1,20 @@
 package com.zyyoona7.easypopup;
 
-import android.graphics.Color;
 import android.view.View;
 import android.widget.Button;
-
-import com.blankj.utilcode.util.Utils;
-import com.facebook.drawee.backends.pipeline.Fresco;
 import com.zyyoona7.easypopup.base.BaseActivity;
 import com.zyyoona7.easypopup.basic.BasicActivity;
 import com.zyyoona7.easypopup.demo.TestResizeActivity;
 import com.zyyoona7.easypopup.easypop.EasyPopActivity;
 import com.zyyoona7.easypopup.easypop.RecyclerViewActivity;
 import com.zyyoona7.easypopup.emoji.EmojiActivity;
+import com.zyyoona7.easypopup.gift.GiftPanelActivity;
+import com.zyyoona7.easypopup.glide.GlideDemoActivity;
 import com.zyyoona7.easypopup.keyboard.KeybordActivity;
 import com.zyyoona7.easypopup.movie.MovieActivity;
 import com.zyyoona7.easypopup.surface.SurfaceActivity;
 import com.zyyoona7.easypopup.svg.SVGActivity;
+import com.zyyoona7.easypopup.threadui.ThreadUpdateUiActivity;
 import com.zyyoona7.easypopup.toast.ToastActivity;
 import com.zyyoona7.easypopup.webp.WebpActivity;
 
@@ -36,6 +35,10 @@ public class MainActivity extends BaseActivity {
     private Button svg;
     private Button resize;
     private Button toast;
+    private Button glide;
+    private Button giftPannel;
+    private Button testRecycler;
+    private Button testThreadUpdateUI;
 
     @Override
     protected int setLayoutId() {
@@ -61,6 +64,10 @@ public class MainActivity extends BaseActivity {
         svg = (Button) findViewById(R.id.svg);
         resize = (Button) findViewById(R.id.resize);
         toast = (Button) findViewById(R.id.toast);
+        glide = (Button) findViewById(R.id.glide);
+        giftPannel = (Button) findViewById(R.id.gift_pannel);
+        testRecycler = (Button) findViewById(R.id.test_recycler);
+        testThreadUpdateUI = (Button) findViewById(R.id.test_thread_update_ui);
     }
 
     @Override
@@ -129,6 +136,30 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 goTo(ToastActivity.class);
+            }
+        });
+        glide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTo(GlideDemoActivity.class);
+            }
+        });
+        giftPannel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTo(GiftPanelActivity.class);
+            }
+        });
+        testRecycler.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTo(RecyclerViewActivity.class);
+            }
+        });
+        testThreadUpdateUI.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTo(ThreadUpdateUiActivity.class);
             }
         });
     }

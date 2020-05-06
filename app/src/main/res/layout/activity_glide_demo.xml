@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".glide.GlideDemoActivity">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="20dp"
+        android:layout_height="20dp" />
+
+    <Button
+        android:id="@+id/btn_test_select"
+        android:text="点击测试选中状态"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp" />
+    <Button
+        android:id="@+id/btn_test_unselect"
+        android:text="点击测试未选中状态"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:layout_width="20dp"
+        android:layout_height="20dp" >
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="20dp"
+            android:translationY="-20dp"
+            android:src="@drawable/svg_live_catalog_hot"
+            android:layout_height="40dp" />
+    </FrameLayout>
+</LinearLayout>

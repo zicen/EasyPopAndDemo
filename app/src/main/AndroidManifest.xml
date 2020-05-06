@@ -12,7 +12,11 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".toast.ToastActivity"></activity>
+        <activity android:name=".threadui.ThreadUpdateUiActivity"></activity>
+        <activity android:name=".recycle.RecyclerViewActivity" />
+        <activity android:name=".gift.GiftPanelActivity" />
+        <activity android:name=".glide.GlideDemoActivity" />
+        <activity android:name=".toast.ToastActivity" />
         <activity android:name=".notice.LiveNoticeActivity" />
         <activity android:name=".demo.TestResizeActivity" />
         <activity android:name=".svg.SVGActivity" />
@@ -37,6 +41,7 @@
         <activity android:name=".surface.SurfaceActivity" />
         <activity android:name=".keyboard.UnresolvedActivity" />
         <activity android:name=".keyboard.ResolvedActivity" />
+        <activity android:name=".jetpack.JetPackActivity" />
     </application>
 
 </manifest>

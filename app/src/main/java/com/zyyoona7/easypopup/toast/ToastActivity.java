@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 import com.blankj.utilcode.util.ToastUtils;
 import com.zyyoona7.easypopup.R;
 
@@ -22,13 +23,24 @@ public class ToastActivity extends AppCompatActivity {
         btnToast.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ToastUtils.showShort("aaaa");
+
+                Toast.makeText(v.getContext(),"hahaha",Toast.LENGTH_SHORT).show();
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         });
         btnToast2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ToastUtil.showShort("aaaa");
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         });
     }
