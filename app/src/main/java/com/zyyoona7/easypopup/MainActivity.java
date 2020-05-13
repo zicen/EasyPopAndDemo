@@ -12,8 +12,11 @@ import com.zyyoona7.easypopup.gift.GiftPanelActivity;
 import com.zyyoona7.easypopup.glide.GlideDemoActivity;
 import com.zyyoona7.easypopup.keyboard.KeybordActivity;
 import com.zyyoona7.easypopup.movie.MovieActivity;
+import com.zyyoona7.easypopup.service.ServiceDemoActivity;
 import com.zyyoona7.easypopup.surface.SurfaceActivity;
 import com.zyyoona7.easypopup.svg.SVGActivity;
+import com.zyyoona7.easypopup.switchpager.SwitchLiveRoomActivity;
+import com.zyyoona7.easypopup.switchpager.SwitchLiveRoomActivity2;
 import com.zyyoona7.easypopup.threadui.ThreadUpdateUiActivity;
 import com.zyyoona7.easypopup.toast.ToastActivity;
 import com.zyyoona7.easypopup.webp.WebpActivity;
@@ -39,6 +42,8 @@ public class MainActivity extends BaseActivity {
     private Button giftPannel;
     private Button testRecycler;
     private Button testThreadUpdateUI;
+    private Button testService;
+    private Button testSwitchRoom;
 
     @Override
     protected int setLayoutId() {
@@ -68,6 +73,8 @@ public class MainActivity extends BaseActivity {
         giftPannel = (Button) findViewById(R.id.gift_pannel);
         testRecycler = (Button) findViewById(R.id.test_recycler);
         testThreadUpdateUI = (Button) findViewById(R.id.test_thread_update_ui);
+        testService = (Button) findViewById(R.id.test_service);
+        testSwitchRoom = (Button) findViewById(R.id.test_switch_room);
     }
 
     @Override
@@ -160,6 +167,19 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 goTo(ThreadUpdateUiActivity.class);
+            }
+        });
+        testService.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTo(ServiceDemoActivity.class);
+            }
+        });
+
+        testSwitchRoom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTo(SwitchLiveRoomActivity2.class);
             }
         });
     }
