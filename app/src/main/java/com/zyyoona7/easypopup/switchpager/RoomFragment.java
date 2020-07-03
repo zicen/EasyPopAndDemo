@@ -1,8 +1,8 @@
 package com.zyyoona7.easypopup.switchpager;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +13,6 @@ import com.blankj.utilcode.util.ToastUtils;
 import com.zyyoona7.easypopup.R;
 
 import java.util.Locale;
-import java.util.Random;
 
 /**
  * Created by zicen on 2020-05-12.

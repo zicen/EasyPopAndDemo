@@ -1,7 +1,7 @@
 package com.zyyoona7.easypopup.easypop;
 
 import android.graphics.Color;
-import android.support.v7.widget.AppCompatTextView;
+import androidx.appcompat.widget.AppCompatTextView;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
-import android.widget.TextView;
 
 import com.blankj.utilcode.util.KeyboardUtils;
 import com.blankj.utilcode.util.LogUtils;
@@ -19,7 +18,6 @@ import com.zyyoona7.easypopup.R;
 import com.zyyoona7.easypopup.base.BaseActivity;
 import com.zyyoona7.easypopup.views.TitleBar;
 import com.zyyoona7.easypopup.views.TriangleDrawable;
-import com.zyyoona7.popup.BasePopup;
 import com.zyyoona7.popup.EasyPopup;
 import com.zyyoona7.popup.XGravity;
 import com.zyyoona7.popup.YGravity;

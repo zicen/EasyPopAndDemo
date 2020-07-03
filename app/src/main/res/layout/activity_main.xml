@@ -116,5 +116,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="测试直播间左右切换" />
+
+        <Button
+            android:id="@+id/test_live_gift"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="测试礼物面板" />
     </LinearLayout>
 </ScrollView>

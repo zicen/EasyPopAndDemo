@@ -1,7 +1,7 @@
 package com.zyyoona7.easypopup.dialogfragment;
 
 import android.content.Context;
-import android.support.v7.app.AppCompatDialog;
+import androidx.appcompat.app.AppCompatDialog;
 
 /**
  * Created by yangya on 2019-12-18.

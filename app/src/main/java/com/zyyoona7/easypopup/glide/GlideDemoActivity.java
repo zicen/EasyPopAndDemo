@@ -1,6 +1,6 @@
 package com.zyyoona7.easypopup.glide;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,8 +10,6 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.zyyoona7.easypopup.R;
 import com.zyyoona7.easypopup.keyboard.ScreenUtils;
-
-import jp.wasabeef.glide.transformations.CropTransformation;
 
 public class GlideDemoActivity extends AppCompatActivity {
     private ImageView img;

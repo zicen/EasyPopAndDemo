@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="取消"
@@ -19,7 +19,7 @@
             android:paddingTop="8dp"
             android:paddingEnd="8dp"
             android:paddingStart="8dp"/>
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="确定"
@@ -30,7 +30,7 @@
             android:paddingEnd="8dp"
             android:paddingStart="8dp"/>
     </FrameLayout>
-    <android.support.v7.widget.AppCompatEditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/et_cmmt"
         android:layout_width="match_parent"
         android:layout_height="100dp"

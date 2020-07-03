@@ -1,14 +1,16 @@
-package com.zyyoona7.easypopup.svg;
+package com.zyyoona7.easypopup.livegiftpanel;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+
 import com.zyyoona7.easypopup.R;
 
-public class SVGActivity extends AppCompatActivity {
+public class LiveGiftPanelActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_svg);
+        setContentView(R.layout.activity_live_gift_panel);
+
     }
 }

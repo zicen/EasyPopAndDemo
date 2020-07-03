@@ -3,13 +3,12 @@ package com.zyyoona7.easypopup.dialogfragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
@@ -18,9 +17,6 @@ import com.blankj.utilcode.util.LogUtils;
 import com.zyyoona7.easypopup.R;
 import com.zyyoona7.easypopup.panel.Constants;
 import com.zyyoona7.easypopup.panel.LogTracker;
-import com.zyyoona7.easypopup.panel.PanelHelper;
-import com.zyyoona7.easypopup.panel.PanelSwitchHelper;
-import com.zyyoona7.easypopup.panel.view.PanelView;
 
 /**
  * Created by zicen on 2020-01-09.

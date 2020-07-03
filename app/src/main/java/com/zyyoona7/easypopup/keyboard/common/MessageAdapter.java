@@ -1,7 +1,7 @@
 package com.zyyoona7.easypopup.keyboard.common;
 
 import android.content.Context;
-import android.support.annotation.LayoutRes;
+import androidx.annotation.LayoutRes;
 
 import com.zyyoona7.easypopup.R;
 

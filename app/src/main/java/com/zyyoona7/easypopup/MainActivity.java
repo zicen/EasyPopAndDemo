@@ -11,6 +11,7 @@ import com.zyyoona7.easypopup.emoji.EmojiActivity;
 import com.zyyoona7.easypopup.gift.GiftPanelActivity;
 import com.zyyoona7.easypopup.glide.GlideDemoActivity;
 import com.zyyoona7.easypopup.keyboard.KeybordActivity;
+import com.zyyoona7.easypopup.livegiftpanel.LiveGiftPanelActivity;
 import com.zyyoona7.easypopup.movie.MovieActivity;
 import com.zyyoona7.easypopup.service.ServiceDemoActivity;
 import com.zyyoona7.easypopup.surface.SurfaceActivity;
@@ -44,6 +45,7 @@ public class MainActivity extends BaseActivity {
     private Button testThreadUpdateUI;
     private Button testService;
     private Button testSwitchRoom;
+    private Button testLiveGift;
 
     @Override
     protected int setLayoutId() {
@@ -75,6 +77,7 @@ public class MainActivity extends BaseActivity {
         testThreadUpdateUI = (Button) findViewById(R.id.test_thread_update_ui);
         testService = (Button) findViewById(R.id.test_service);
         testSwitchRoom = (Button) findViewById(R.id.test_switch_room);
+        testLiveGift = (Button) findViewById(R.id.test_live_gift);
     }
 
     @Override
@@ -180,6 +183,12 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 goTo(SwitchLiveRoomActivity2.class);
+            }
+        });
+        testLiveGift.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTo(LiveGiftPanelActivity.class);
             }
         });
     }

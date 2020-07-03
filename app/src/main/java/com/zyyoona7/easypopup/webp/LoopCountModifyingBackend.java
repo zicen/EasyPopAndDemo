@@ -1,6 +1,6 @@
 package com.zyyoona7.easypopup.webp;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import com.facebook.fresco.animation.backend.AnimationBackend;
 import com.facebook.fresco.animation.backend.AnimationBackendDelegate;
 

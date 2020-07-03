@@ -1,19 +1,17 @@
 package com.zyyoona7.easypopup.switchpager;
 
-import android.os.Looper;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
+
 import com.blankj.utilcode.util.LogUtils;
-import com.zyyoona7.easypopup.MainActivity;
 import com.zyyoona7.easypopup.R;
 
 import java.util.ArrayList;
@@ -108,7 +106,7 @@ public class SwitchLiveRoomActivity extends AppCompatActivity {
         viewGroup.addView(mRoomContainer);
     }
 
-    class PagerAdapter extends android.support.v4.view.PagerAdapter {
+    class PagerAdapter extends androidx.viewpager.widget.PagerAdapter {
 
         @Override
         public int getCount() {

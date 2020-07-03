@@ -15,7 +15,7 @@
 
     </com.zyyoona7.easypopup.views.TitleBar>
 
-    <android.support.v4.widget.NestedScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -90,7 +90,7 @@
                 android:text="评论弹窗"
                 android:textSize="14sp"/>
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_pop_everywhere"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
@@ -101,7 +101,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"/>
         </LinearLayout>
-    </android.support.v4.widget.NestedScrollView>
+    </androidx.core.widget.NestedScrollView>
 
     <Button
         android:id="@+id/btn_complex"

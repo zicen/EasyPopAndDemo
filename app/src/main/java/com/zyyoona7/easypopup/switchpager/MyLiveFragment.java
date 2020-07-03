@@ -1,10 +1,11 @@
 package com.zyyoona7.easypopup.switchpager;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.view.ViewPager;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -134,7 +135,7 @@ public class MyLiveFragment extends Fragment {
         viewGroup.addView(mRoomContainer);
     }
 
-    class PagerAdapter extends android.support.v4.view.PagerAdapter {
+    class PagerAdapter extends androidx.viewpager.widget.PagerAdapter {
         private List<Long> itemList;
         // 最好不要用Integer.MAX_VALUE这个值，因为在setCurrentItem的时候会出现卡顿，甚至 ANR，可以适当设置小一点
         public static final int mLooperCount = 500;

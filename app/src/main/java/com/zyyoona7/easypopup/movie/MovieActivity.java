@@ -1,6 +1,6 @@
 package com.zyyoona7.easypopup.movie;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.alphamovie.lib.AlphaMovieView;
 import com.zyyoona7.easypopup.R;

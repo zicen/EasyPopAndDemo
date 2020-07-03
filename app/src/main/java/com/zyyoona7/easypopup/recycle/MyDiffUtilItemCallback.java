@@ -1,7 +1,7 @@
 package com.zyyoona7.easypopup.recycle;
 
 import android.os.Bundle;
-import android.support.v7.util.DiffUtil;
+import androidx.recyclerview.widget.DiffUtil;
 
 /**
  * Created by zicen on 2020-04-25.
